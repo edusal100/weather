@@ -51,7 +51,7 @@ class _LocationScreenState extends State<LocationScreen> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: const AssetImage('images/location_background.jpg'),
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
             colorFilter: ColorFilter.mode(
                 Colors.white.withOpacity(0.8), BlendMode.dstATop),
           ),
@@ -59,7 +59,6 @@ class _LocationScreenState extends State<LocationScreen> {
         constraints: const BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Row(
@@ -94,28 +93,20 @@ class _LocationScreenState extends State<LocationScreen> {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 15.0),
-                child: Row(
-                  children: [
-                    Text(
-                      '$temperature°',
-                      style: kTempTextStyle,
-                    ),
-                    Text(
-                      weatherIcon,
-                      style: kConditionTextStyle,
-                    ),
-                  ],
-                ),
+              const SizedBox(
+                height: 40.0,
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 15.0),
-                child: Text(
-                  '$weatherMessage in $cityName!',
-                  textAlign: TextAlign.right,
-                  style: kMessageTextStyle,
-                ),
+              Column(
+                children: [
+                  Text(
+                    cityName,
+                    style: kConditionTextStyle,
+                  ),
+                  Text(
+                    '$temperature°',
+                    style: kTempTextStyle,
+                  ),
+                ],
               ),
             ],
           ),

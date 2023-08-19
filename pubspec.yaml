@@ -49,9 +49,9 @@ flutter:
   - images/
 
   fonts:
-  - family: Spartan MB
+  - family: Sfdisplay
     fonts:
-    - asset: fonts/SpartanMB-Black.otf
+    - asset: fonts/SFPRODISPLAYTHINITALIC.OTF
       weight: 900
 
   # To add assets to your application, add an assets section, like this:
