@@ -18,6 +18,7 @@ class _LocationScreenState extends State<LocationScreen> {
   late String weatherIcon;
   late String cityName;
   late String weatherMessage;
+  late String description;
 
   @override
   void initState() {
@@ -33,6 +34,7 @@ class _LocationScreenState extends State<LocationScreen> {
         weatherIcon = 'Error';
         weatherMessage = 'Unable to get weather data';
         cityName = '';
+        description = '';
         return;
       }
       double temp = weatherData['main']['temp'];
@@ -41,6 +43,7 @@ class _LocationScreenState extends State<LocationScreen> {
       cityName = weatherData['name'];
       weatherIcon = weather.getWeatherIcon(condition);
       weatherMessage = weather.getMessage(temperature);
+      description = weatherData['weather'][0]['description'];
     });
   }
 
@@ -105,6 +108,10 @@ class _LocationScreenState extends State<LocationScreen> {
                   Text(
                     '$temperature°',
                     style: kTempTextStyle,
+                  ),
+                  Text(
+                    "${description[0].toUpperCase()}${description.substring(1).toLowerCase()}",
+                    style: kDescriptionTextStyle,
                   ),
                 ],
               ),

@@ -49,10 +49,9 @@ flutter:
   - images/
 
   fonts:
-  - family: Sfdisplay
+  - family: sfpro
     fonts:
-    - asset: fonts/SFPRODISPLAYTHINITALIC.OTF
-      weight: 900
+    - asset: fonts/sfprothin.otf
 
   # To add assets to your application, add an assets section, like this:
   # assets:

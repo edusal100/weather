@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const kTempTextStyle = TextStyle(
   fontWeight: FontWeight.w100,
-  fontSize: 100.0,
+  fontSize: 80.0,
 );
 
 const kMessageTextStyle = TextStyle(
@@ -16,6 +16,12 @@ const kButtonTextStyle = TextStyle(
 const kConditionTextStyle = TextStyle(
   fontSize: 30.0,
   fontWeight: FontWeight.w100,
+);
+
+const kDescriptionTextStyle = TextStyle(
+  fontSize: 20.0,
+  fontWeight: FontWeight.w100,
+  color: Colors.grey,
 );
 
 const kTextFieldInputDecoration = InputDecoration(
